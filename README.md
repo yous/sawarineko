@@ -24,7 +24,7 @@ Run `sawarineko` with no arguments to pass texts through terminal input.
 sawarineko
 ```
 
-Or pass `sawarineko` a file to convert:
+Or pass `sawarineko` a file to convert like `sawarineko README.md | head -3`:
 
 ``` sh
 sawarineko something.txt
