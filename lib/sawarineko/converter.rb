@@ -16,6 +16,7 @@ module Sawarineko
     def convert
       @source
         .gsub(/な/, 'にゃ')
+        .gusb(/ナ/, 'ニャ')
         .gsub(/[나-낳]/) { |ch| (ch.ord + 56).chr(Encoding::UTF_8) }
     end
   end
