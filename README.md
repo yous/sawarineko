@@ -49,6 +49,10 @@ Command flag    | Description
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).
+
 ## License
 
 Copyright (c) ChaYoung You. See [LICENSE.txt](LICENSE.txt) for further details.
