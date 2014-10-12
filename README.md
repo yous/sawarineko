@@ -18,7 +18,28 @@ gem 'sawarineko'
 
 ## Usage
 
-TODO: Write usage instructions here
+Run `sawarineko` with no arguments to pass texts through terminal input.
+
+``` sh
+sawarineko
+```
+
+Or pass `sawarineko` a file to convert:
+
+``` sh
+sawarineko something.txt
+```
+
+For additional command-line options:
+
+``` sh
+sawarineko -h
+```
+
+Command flag    | Description
+----------------|--------------------
+`-h, --help`    | Print this message.
+`-v, --version` | Print version.
 
 ## Contributing
 
