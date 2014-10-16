@@ -1,5 +1,10 @@
 # Sawarineko
 
+[![Gem Version](https://badge.fury.io/rb/sawarineko.svg)](http://badge.fury.io/rb/sawarineko)
+[![Dependency Status](https://gemnasium.com/yous/sawarineko.svg)](https://gemnasium.com/yous/sawarineko)
+[![Inline docs](http://inch-ci.org/github/yous/sawarineko.svg?branch=master)](http://inch-ci.org/github/yous/sawarineko)
+[![sawarineko API Documentation](https://www.omniref.com/ruby/gems/sawarineko.png)](https://www.omniref.com/ruby/gems/sawarineko)
+
 > ななめななじゅうななどのならびでなくなくいななくななはんななだいなんなくならべてながながめ
 
 Get your Nya!
