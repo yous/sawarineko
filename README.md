@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/yous/sawarineko.svg?branch=master)](https://travis-ci.org/yous/sawarineko)
 [![Dependency Status](https://gemnasium.com/yous/sawarineko.svg)](https://gemnasium.com/yous/sawarineko)
 [![Code Climate](https://codeclimate.com/github/yous/sawarineko/badges/gpa.svg)](https://codeclimate.com/github/yous/sawarineko)
-[![Coverage Status](https://coveralls.io/repos/yous/sawarineko/badge.png)](https://coveralls.io/r/yous/sawarineko)
+[![Coverage Status](https://img.shields.io/coveralls/yous/sawarineko.svg)](https://coveralls.io/r/yous/sawarineko?branch=master)
 [![Inline docs](http://inch-ci.org/github/yous/sawarineko.svg?branch=master)](http://inch-ci.org/github/yous/sawarineko)
 [![sawarineko API Documentation](https://www.omniref.com/ruby/gems/sawarineko.png)](https://www.omniref.com/ruby/gems/sawarineko)
 
