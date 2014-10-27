@@ -1,7 +1,12 @@
 # encoding: utf-8
 
-if ENV['COVERAGE']
+if ENV['TRAVIS'] || ENV['COVERAGE']
   require 'simplecov'
+
+  if ENV['TRAVIS']
+    require 'coveralls'
+    SimpleCov.formatter = Coveralls::SimpleCov::Formatter
+  end
 
   SimpleCov.start do
     add_filter '/spec/'
