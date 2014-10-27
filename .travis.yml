@@ -9,3 +9,4 @@ matrix:
     - rvm: ruby-head
 before_install:
   - gem update --system
+  - gem update --remote bundler
