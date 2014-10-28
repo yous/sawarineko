@@ -5,7 +5,7 @@ require 'spec_helper'
 RSpec.describe Sawarineko do
   subject(:sawarineko) { described_class }
 
-  describe '#nya' do
+  describe '.nya' do
     it { is_expected.to respond_to(:nya) }
 
     it 'converts string passed as an argument' do
