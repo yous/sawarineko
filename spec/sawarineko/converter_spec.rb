@@ -38,4 +38,9 @@ RSpec.describe Sawarineko::Converter do
              '개냐리 꽃에 냐비가 하냐 ' \
              '배냥 속에 바냐냐가 하냐')
   end
+
+  it 'converts all languages at once' do
+    expect(converter.convert(%w(な ナ 나).join("\n")))
+      .to eq(%w(にゃ ニャ 냐).join("\n"))
+  end
 end
