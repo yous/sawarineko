@@ -21,8 +21,8 @@ module Sawarineko
                else
                  IO.read(paths[0])
                end
-      runner = Converter.new(source)
-      puts runner.convert
+      converter = Converter.new
+      puts converter.convert(source)
       0
     end
   end

@@ -3,18 +3,13 @@
 module Sawarineko
   # Convert plain text to Sawarineko text.
   class Converter
-    # Initialize a Converter. Get a String source.
-    #
-    # source - The String source to convert.
-    def initialize(source)
-      @source = source
-    end
-
     # Convert the source.
     #
+    # source - The String source to convert.
+    #
     # Returns the String converted to Sawarineko.
-    def convert
-      @source
+    def convert(source)
+      source
         .gsub(/な/, 'にゃ')
         .gsub(/ナ/, 'ニャ')
         .gsub(/[나-낳]/) { |ch| (ch.ord + 56).chr(Encoding::UTF_8) }
