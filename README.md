@@ -26,6 +26,19 @@ gem 'sawarineko'
 
 ## Usage
 
+Just get your Nya with Sawarineko:
+
+``` ruby
+Sawarineko.nya('ばなな')
+# => "ばにゃにゃ"
+
+Sawarineko.nya('バナナ')
+# => "バニャニャ"
+
+Sawarineko.nya('바나나')
+# => "바냐냐"
+```
+
 Run `sawarineko` with no arguments to pass texts through terminal input.
 
 ``` sh
