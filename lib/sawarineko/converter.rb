@@ -12,6 +12,20 @@ module Sawarineko
     # conversion.
     #
     # encoding - The Encoding of source (default: Encoding::UTF_8).
+    #
+    # Examples
+    #
+    #   # UTF-8 is default.
+    #   Converter.new
+    #
+    #   # Encoding object.
+    #   Converter.new(Encoding::UTF_16LE)
+    #
+    #   # Encoding name.
+    #   Converter.new('EUC-JP')
+    #
+    #   # Alias of encoding name.
+    #   Converter.new('eucKR')
     def initialize(encoding = Encoding::UTF_8)
       @encoding = Encoding.find(encoding)
       @hiragana_regex = Regexp.new('な'.encode(@encoding)).freeze
