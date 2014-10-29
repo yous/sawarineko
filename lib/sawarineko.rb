@@ -9,10 +9,11 @@ require 'sawarineko/cli'
 module Sawarineko
   # Make the source to Sawarineko. See Converter.
   #
-  # source - The String source to convert.
+  # source   - The String source to convert.
+  # encoding - The Encoding of the source (default: Encoding::UTF_8).
   #
   # Returns the String converted to Sawarineko.
-  def self.nya(source)
-    Converter.new.convert(source)
+  def self.nya(source, encoding = Encoding::UTF_8)
+    Converter.new(encoding).convert(source)
   end
 end

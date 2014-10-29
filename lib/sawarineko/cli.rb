@@ -19,9 +19,9 @@ module Sawarineko
       source = if paths.empty?
                  $stdin.read
                else
-                 IO.read(paths[0])
+                 IO.read(paths[0], encoding: @options[:encoding])
                end
-      converter = Converter.new
+      converter = Converter.new(@options[:encoding])
       puts converter.convert(source)
       0
     end

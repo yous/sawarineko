@@ -25,6 +25,7 @@ RSpec.describe Sawarineko::Option do
 
         expected_help = <<-END
 Usage: sawarineko [options] [source]
+    -e, --encoding ENCODING          Specify the encoding of input.
     -h, --help                       Print this message.
     -v, --version                    Print version.
         END

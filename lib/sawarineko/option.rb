@@ -7,7 +7,7 @@ module Sawarineko
   class Option
     # Initialize a Option.
     def initialize
-      @options = {}
+      @options = { encoding: Encoding::UTF_8 }
     end
 
     # Parse the passed arguments to a Hash.
@@ -21,24 +21,37 @@ module Sawarineko
         opts.banner = 'Usage: sawarineko [options] [source]'
 
         add_options(opts)
+        add_options_on_tail(opts)
       end.parse!(args)
       [@options, args]
     end
 
     private
 
-    # Add command line options to OptionParser.
+    # Add command line options.
     #
     # opts - An OptionParser object to add options.
     #
     # Returns nothing.
     def add_options(opts)
-      opts.on('-h', '--help', 'Print this message.') do
+      opts.on('-e', '--encoding ENCODING',
+              'Specify the encoding of input.') do |encoding|
+        @options[:encoding] = encoding
+      end
+    end
+
+    # Add command line options printed at tail.
+    #
+    # opts - An OptionParser object to add options.
+    #
+    # Returns nothing.
+    def add_options_on_tail(opts)
+      opts.on_tail('-h', '--help', 'Print this message.') do
         puts opts
         exit 0
       end
 
-      opts.on('-v', '--version', 'Print version.') do
+      opts.on_tail('-v', '--version', 'Print version.') do
         puts Version::STRING
         exit 0
       end

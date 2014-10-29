@@ -36,4 +36,20 @@ RSpec.describe Sawarineko::CLI do
                                  'にゃにゃはんにゃにゃだいにゃんにゃく' \
                                  "にゃらべてにゃがにゃがめ\n")
   end
+
+  describe '-e/--encoding' do
+    it 'converts text file with given encoding' do
+      create_file('sawarineko.txt',
+                  ['ななめななじゅうななどの' \
+                   'ならびでなくなくいななく' \
+                   'ななはんななだいなんなく' \
+                   'ならべてながながめ'.encode(Encoding::CP949)])
+      expect(cli.run(['--encoding', 'cp949',
+                      'sawarineko.txt'])).to be(0)
+      expect($stdout.string).to eq('にゃにゃめにゃにゃじゅうにゃにゃどの' \
+                                   'にゃらびでにゃくにゃくいにゃにゃく' \
+                                   'にゃにゃはんにゃにゃだいにゃんにゃく' \
+                                   "にゃらべてにゃがにゃがめ\n")
+    end
+  end
 end

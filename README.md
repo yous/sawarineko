@@ -57,10 +57,11 @@ For additional command-line options:
 sawarineko -h
 ```
 
-Command flag    | Description
-----------------|--------------------
-`-h, --help`    | Print this message.
-`-v, --version` | Print version.
+Command flag              | Description
+--------------------------|-------------------------------
+`-e, --encoding ENCODING` | Specify the encoding of input.
+`-h, --help`              | Print this message.
+`-v, --version`           | Print version.
 
 ## Contributing
 
