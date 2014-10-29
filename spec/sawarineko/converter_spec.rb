@@ -94,6 +94,13 @@ RSpec.describe Sawarineko::Converter do
                                '개냐리 꽃에 냐비가 하냐 ' \
                                '배냥 속에 바냐냐가 하냐'.encode(encoding))
     end
+
+    it 'preserves other hangul in range 나-낳' do
+      %w(낚 낟 낡 낢 납 낫 났 낮 낯 낱 낳).each do |ch|
+        new_source = convert_source(converter, encoding, ch)
+        expect(new_source).to eq(ch.encode(encoding))
+      end
+    end
   end
 
   context 'with CP949 encoding' do
