@@ -46,7 +46,7 @@ module Sawarineko
     # Returns the String converted to Sawarineko.
     def convert(source)
       new_source = source.gsub(@hiragana_regex, 'にゃ'.encode(@encoding).freeze)
-                         .gsub(@katakana_regex, 'ニャ'.encode(@encoding).freeze)
+                   .gsub(@katakana_regex, 'ニャ'.encode(@encoding).freeze)
       if @hangul_regex
         new_source.gsub(@hangul_regex) { |ch| convert_hangul(ch) }
       else
@@ -66,7 +66,7 @@ module Sawarineko
         return ch
       end
       (ch.encode(Encoding::UTF_8).ord + 56).chr(Encoding::UTF_8)
-                                           .encode(@encoding)
+        .encode(@encoding)
     end
   end
 end

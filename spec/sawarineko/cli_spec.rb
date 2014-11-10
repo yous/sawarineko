@@ -26,10 +26,10 @@ RSpec.describe Sawarineko::CLI do
 
   it 'converts string passed as an stdin argument' do
     allow($stdin).to receive(:read).once
-                       .and_return('ななめななじゅうななどの' \
-                                   'ならびでなくなくいななく' \
-                                   'ななはんななだいなんなく' \
-                                   'ならべてながながめ')
+      .and_return('ななめななじゅうななどの' \
+                  'ならびでなくなくいななく' \
+                  'ななはんななだいなんなく' \
+                  'ならべてながながめ')
     expect(cli.run([])).to be(0)
     expect($stdout.string).to eq('にゃにゃめにゃにゃじゅうにゃにゃどの' \
                                  'にゃらびでにゃくにゃくいにゃにゃく' \
