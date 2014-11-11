@@ -14,7 +14,7 @@ module Sawarineko
     #
     # args - An Array of Strings containing options.
     #
-    # Returns an Array contains of a Hash options and an Array of Strings
+    # Returns an Array containing a Hash options and an Array of Strings
     #   remaining arguments.
     def parse(args)
       OptionParser.new do |opts|

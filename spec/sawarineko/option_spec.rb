@@ -35,7 +35,7 @@ Usage: sawarineko [options] [source]
     end
 
     describe '-v/--version' do
-      it 'exists cleanly' do
+      it 'exits cleanly' do
         expect { option.parse(['-v']) }.to exit_with_code(0)
         expect { option.parse(['--version']) }.to exit_with_code(0)
         expect($stdout.string).to eq("#{Sawarineko::Version::STRING}\n" * 2)
